@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <header>
-        <Header />
+        <Header title="Sadaqah Box "/>
       </header>
       <main>
         <Home />
