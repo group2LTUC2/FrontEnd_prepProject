@@ -10,8 +10,8 @@ function Header(props){
         <h1 className="website-name">{props.title}</h1>
         <nav className="navigation">
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/donation">Donation</Link></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/donations">Donations</Link></li>
             <li><Link to="/about-us">About Us</Link></li>
           </ul>
         </nav>

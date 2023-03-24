@@ -40,5 +40,3 @@ The following 3rd party APIs will be used in this project:
 4. [API 4](https://www.islamicfinder.org/)
 
 ## Wireframe
-![WhatsApp Image 2023-03-22 at 21 54 44](https://user-images.githubusercontent.com/60603704/227377259-f710e8c0-c62a-4061-8c6a-a6052c6791a3.jpg)
-

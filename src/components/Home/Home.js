@@ -1,3 +1,4 @@
+import ImageUploader from "../ImageUploader/ImageUploader";
 import SliderComponent from "../Slider/SliderComponent";
 
 function Home() {
@@ -5,7 +6,7 @@ function Home() {
         <>
             <div style={{margin:'20px'}}>
                 <SliderComponent />
-
+                {/* <ImageUploader/> */}
             </div>
 
 
