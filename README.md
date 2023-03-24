@@ -1,71 +1,42 @@
-# Getting Started with Create React App
+# Sadaqah Box
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Idea
+Our web app, named "SadaqahBox", aims to tackle two significant issues during the holy month of Ramadan: food waste and hunger. The project will provide a platform for people to donate food to those in need, reducing food waste and ensuring that everyone has access to nutritious meals during Ramadan.
 
-## Available Scripts
 
-In the project directory, you can run:
+## How will the web app be useful?
+The web app will be useful in multiple ways:
 
-### `npm start`
+1. It will provide an easy and convenient way for people to donate food during Ramadan.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. It will help reduce food waste by redirecting surplus food to those in need.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. It will enable people to give back to their communities during a time of great significance for Muslims.
 
-### `npm test`
+4. It will help provide nutritious meals to those who may not have access to them otherwise.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Functionality Plan
+The key features of the "SadaqahBox" web app will include:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. A page that allows users to manage their donations and view their donation history.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. A donation form that enables users to provide details about their food donations, including quantity, type of food, and pickup/drop-off locations.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. A search feature that allows users to search for food donations by location and type of food.
 
-### `npm run eject`
+4. An email notification system that sends notifications to users when their donations are received and when there are new donations available in their area.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 3rd Party API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The following 3rd party APIs will be used in this project:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. [API 1](https://aladhan.com/islamic-calendar-api)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. [API 2](https://documenter.getpostman.com/view/7929737/TzkyMfPc#47031345-a659-42e6-b9e0-a313adef3793)
 
-## Learn More
+3. [API 3](http://www.islamicfinder.us/index.php/api/listing)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. [API 4](https://www.islamicfinder.org/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# FrontEnd_prepProject
+## Wireframe
