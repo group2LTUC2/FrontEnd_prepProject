@@ -1,0 +1,67 @@
+.sadaqah-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .sadaqah-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .sadaqah-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #ffffff;
+  }
+  
+  .sadaqah-card-header h2 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .sadaqah-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .sadaqah-card-body h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+    
+    .sadaqah-card-body p {
+    font-size: 1.2rem;
+    text-align: center;
+    }
+    
+    .sadaqah-card-header:nth-child(1) {
+    background-color: #F6F1F1;
+    }
+    
+    .sadaqah-card-header:nth-child(2) {
+    background-color: #19A7CE;
+    }
+    
+    .sadaqah-card-header:nth-child(3) {
+    background-color: #146C94;
+    }
+    
+    .sadaqah-card-header:nth-child(4) {
+    background-color: #000000;
+    }
+  

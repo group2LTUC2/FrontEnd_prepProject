@@ -19,7 +19,7 @@ const SliderComponent = () => {
     <div className="slider-component">
       <Slider {...settings}>
         <div>
-          <img src="https://img.freepik.com/free-vector/ramadan-kareem-arabic-golden-banner_1017-31088.jpg?size=626&ext=jpg&uid=R97189071&ga=GA1.2.1879009063.1675089754&semt=ais" alt="Ad 1" />
+          <img src="https://img.freepik.com/free-vector/ramadan-kareem-banner-with-hanging-lamp-stars_1017-30846.jpg?size=626&ext=jpg&uid=R97189071&ga=GA1.2.1879009063.1675089754&semt=ais" alt="Ad 1" />
         </div>
         <div>
           <img src="https://img.freepik.com/free-vector/ramadan-kareem-banner-with-hanging-lamp-stars_1017-30846.jpg?size=626&ext=jpg&uid=R97189071&ga=GA1.2.1879009063.1675089754&semt=ais" alt="Ad 2" />
