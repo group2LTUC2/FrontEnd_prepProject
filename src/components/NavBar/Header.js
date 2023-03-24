@@ -3,11 +3,11 @@ import logo from '../../logo.svg'
 import { Link } from 'react-router-dom';
 import './Header.css'
 
-function Header(){
+function Header(props){
     return (
       <div className="modern-component">
         <img src={logo} alt="Logo" className="logo" />
-        <h1 className="website-name">Sadaqah Box</h1>
+        <h1 className="website-name">{props.title}</h1>
         <nav className="navigation">
           <ul>
           <li><Link to="/">Home</Link></li>
