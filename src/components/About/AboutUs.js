@@ -60,7 +60,7 @@ const AboutUs = () => {
     const handleSocialLinkClick = url => {
         window.open(url, '_blank');
     };
-
+ 
     return (
         <div className="about-us">
             <h1>About Us</h1>
@@ -80,7 +80,7 @@ const AboutUs = () => {
                 <br /><br /><b>Mustafa Mnasour</b> is a dedicated software engineer who has worked tirelessly to ensure that the SadaqahBox platform is user-friendly and accessible to all. His commitment to the project and his attention to detail have been critical in ensuring that the platform meets the needs of its users.</p>
             <h2>Our Team</h2>
             <div className="team-cards">
-                {teamMembers.map(member => (
+                {teamMembers.map(member => ( 
                     <div className="team-card" key={member.name}>
                         <div className="team-card-image">
                             <img src={member.imgSrc} alt={member.name} />
