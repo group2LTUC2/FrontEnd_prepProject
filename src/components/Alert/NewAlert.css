@@ -1,0 +1,26 @@
+.alert-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F0FFF4;
+    color: #00A86B;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .alert-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .alert-text {
+    font-size: 16px;
+    font-weight: 600;
+    flex: 1;
+  }
+  
+  .alert-close {
+    font-size: 20px;
+    cursor: pointer;
+  }

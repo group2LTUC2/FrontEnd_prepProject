@@ -40,15 +40,7 @@ const SadaqahStep = () => {
           <p>Encourage others to give by sharing your Sadaqah experience and the impact it has made.</p>
         </div>
       </div>
-      <div className="sadaqah-card">
-        <div className="sadaqah-card-header" style={{ backgroundColor: '#146C94' }}>
-          <h2>Step 5</h2>
-        </div>
-        <div className="sadaqah-card-body">
-          <h3>Share your good deeds</h3>
-          <p>Encourage others to give by sharing your Sadaqah experience and the impact it has made.</p>
-        </div>
-      </div>
+      
     </div>
   );
 };
