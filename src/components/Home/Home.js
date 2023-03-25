@@ -7,16 +7,21 @@ import SliderComponent from "../Slider/SliderComponent";
 function Home() {
     return (
         <>
-           
-            <HeroSection/>
-            <div style={{ margin: '20px', display: "flex" }}>
+            <div >
 
-                <DonationFormPage />
+                <HeroSection />
+                <div style={{ margin: '20px', display: "flex" }}>
+
+                    <DonationFormPage title="Make a Donation" type="donations" />
+                    <DonationFormPage title="Join us as a volunteer" type="Volunteer"/>
+
+                    {/* <ImageUploader/> */}
+                </div>
                 <div style={{ marginTop: '20px' }} >
                     <SadaqahStep />
 
                 </div>
-                {/* <ImageUploader/> */}
+
             </div>
 
 

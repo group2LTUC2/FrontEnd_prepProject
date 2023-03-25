@@ -1,18 +1,16 @@
+import React from 'react';
 import './HeroSection.css'
-import img from '../../img1.jpg'
-function HeroSection() {
-    return (
-      <div
-        className="hero"
-        style={{ backgroundImage: `url(${img})` }}
-      >
-        <div className="hero-content">
-          <h1>Welcome to Sadaqah Box</h1>
-          <p>Support our mission to make a difference in the lives of those in need during this holy month.</p>
-          <button >Donate Now 🤗</button>
-        </div>
+const HeroSection = () => {
+  return (
+    <div className="hero-section">
+        <div className="overlay"></div>
+      <div className="hero-content">
+        <h1> مَنْ فَطَّرَ صَائِمًا كَانَ لَهُ مِثْلُ أَجْرِهِ، غَيْرَ أَنَّهُ لَا يَنْقُصُ مِنْ أَجْرِ الصَّائِمِ شَيْئًا</h1>
+        <p >Be the cause of doing good.</p>
+        <button onClick={() => { alert("soon") }} className="hero-button">Donate now  🌎 ❤️</button>
       </div>
-    );
-  }
+    </div>
+  );
+};
 
-  export default HeroSection;
+export default HeroSection;
