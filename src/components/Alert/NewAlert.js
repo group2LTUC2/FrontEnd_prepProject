@@ -13,7 +13,7 @@ function NewAlert(props) {
 
   return (
     showAlert && (
-      <div className="alert-container">
+      <div className="alert-container" style={props.type==="ok"?{color: "#00A86B"}:{color:'red'}}>
         <div className="alert-icon">
           <FontAwesomeIcon icon={faCheck} />
         </div>

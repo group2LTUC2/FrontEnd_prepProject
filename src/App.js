@@ -6,7 +6,7 @@ import AboutUs from './components/About/AboutUs';
 import PrayerTimesPopup from "./components/PrayerTimesPopup/PrayerTimesPopup";
 import { useState } from 'react';
 
-
+import LoginButton from './LogIn/LogIn'
 function App() {
   const [showPopup, setShowPopup] = useState(true);
 
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      {showPopup && <PrayerTimesPopup handelShow={handelShow} />}
+      {/* {showPopup && <PrayerTimesPopup handelShow={handelShow} />} */}
       <div >
         <header>
           <Header />
@@ -25,6 +25,7 @@ function App() {
           <Route path='/' element={<Home />} ></Route>
           <Route path='about' element={<AboutUs />} ></Route>
         </Routes>
+        
       </div>
 
     </>
