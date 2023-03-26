@@ -1,3 +1,4 @@
+import Profile from "../../LogIn/Profile";
 import DonationFormPage from "../DonationFormPage/DonationFormPage";
 import HeroSection from "../HeroSection/HeroSection";
 import ImageUploader from "../ImageUploader/ImageUploader";
@@ -19,6 +20,7 @@ function Home() {
                 </div>
                 <div style={{ marginTop: '20px' }} >
                     <SadaqahStep />
+                    <Profile/>
 
                 </div>
 
