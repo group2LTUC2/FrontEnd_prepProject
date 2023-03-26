@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import AboutUs from './components/About/AboutUs';
 import PrayerTimesPopup from "./components/PrayerTimesPopup/PrayerTimesPopup";
 import { useState } from 'react';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
           <Route path='about' element={<AboutUs />} ></Route>
         </Routes>
       </div>
-
+      <Footer />
     </>
   );
 }

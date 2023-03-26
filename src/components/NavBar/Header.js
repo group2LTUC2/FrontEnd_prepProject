@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+
+import { useEffect, useState } from "react";
+import axios from 'axios'
+
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../../logo.svg'
@@ -10,6 +13,8 @@ const Header = () => {
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
   };
+  
+  
 
   return (
     <header className="header-container">
@@ -17,9 +22,11 @@ const Header = () => {
         <div className="logo">
           <img src={logo} alt="Logo" />
         </div>
-        <h1>SadaqahBox</h1>
-
+        {/* Mustafa .. when i press on the sadaqah box go to home page */}
+        <h1><Link to="/" style={{textDecoration:"none",color:"#cbd8e3"}}>SadaqahBox</Link></h1>
+        
         <div className="menu-container">
+
           <div className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </div>

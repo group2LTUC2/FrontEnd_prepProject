@@ -10,8 +10,8 @@ function Home() {
             <div >
 
                 <HeroSection />
-                <div style={{ margin: '20px', display: "flex" }}>
-
+                <div style={{ margin: '50px', display: "flex",color: "black",width:"500"}}>
+            
                     <DonationFormPage title="Make a Donation" type="donations" />
                     <DonationFormPage title="Join us as a volunteer" type="Volunteer"/>
 

@@ -3,9 +3,8 @@ import "./PrayerTimesPopup.css";
 import axios from 'axios'
 const PrayerTimesPopup = ({ handelShow }) => {
     const [maghrib, setMaghrib] = useState();
-    
     useEffect(() => {
-        axios.get('http://localhost:3000/api').then((result) => {
+        axios.get('http://localhost:3003/api').then((result) => {
             setMaghrib(result.data[0]['Maghrib'])
         })
 
