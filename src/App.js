@@ -7,6 +7,7 @@ import PrayerTimesPopup from "./components/PrayerTimesPopup/PrayerTimesPopup";
 import { useState } from 'react';
 
 import LoginButton from './LogIn/LogIn'
+import DonationsPage from './components/DonationPage/DonationPage';
 function App() {
   const [showPopup, setShowPopup] = useState(true);
 
@@ -23,7 +24,8 @@ function App() {
         </header>
         <Routes>
           <Route path='/' element={<Home />} ></Route>
-          <Route path='about' element={<AboutUs />} ></Route>
+          <Route path='/about' element={<AboutUs />} ></Route>
+          <Route path='/donations' element={<DonationsPage/>} ></Route>
         </Routes>
         
       </div>

@@ -54,7 +54,7 @@ const getVolanteer = async () => {
 
 const postVolanteer = async (userData) => {
     try {
-        const response = await axios.post(`${URL}/volunteer`, userData);
+        const response = await axios.post(`${URL}/volunteer`,userData);
         console.log(response)
         return response.data;
     } catch (error) {

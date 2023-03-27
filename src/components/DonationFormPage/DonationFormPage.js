@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useState,useEffect } from 'react';
 import './DonationFormPage.css';
 import axios from 'axios';
 import NewAlert from '../Alert/NewAlert';
@@ -12,6 +12,7 @@ const initialStateForDonations = {
     quantity: "",
     location: "",
     img: "https://files.fm/u/ntagav5p2",
+    email: ""
 };
 
 const initialStateForVolanteer = {
@@ -56,12 +57,17 @@ function DonationFormPage({ title, type }) {
     const [stateForVolanteer, dispatchForVolanteer] = useReducer(reducerForVolanteer, initialStateForVolanteer);
     const [showAlert, setShowAlert] = useState(false);
 
-    const { user} = useAuth0();
-    
-console.log(user);
+    const { user } = useAuth0();
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            closeAlert();
+        }, 2000);
+        return () => clearTimeout(timer);
+    }, [closeAlert]);
+
     const handleChange = (event, type) => {
         switch (type) {
-            case "changeName": dispatch({ type: "changeName", payload: event.target.value });
+            case "changeName": dispatch({ type: "changeName", payload: user.name });
                 break;
             case "changePhoneNumber": dispatch({ type: "changePhoneNumber", payload: event.target.value });
                 break;
@@ -87,18 +93,30 @@ console.log(user);
 
 
     async function addDonations(event, type) {
-
         event.preventDefault();
-        if(!user){
+
+
+        if (!user) {
             alert("plz log in");
             return;
         }
 
-        if (type === "donations")
-            if (state.fullName && state.item && state.phoneNumber && state.quantity && state.location)
-                postDonations(state);
+        console.log(state)
+
+        if (type === "donations") {
+            state.email = user.email;
+            state.fullName = user.name || user.nickname;
+            if (state.fullName && state.item && state.phoneNumber && state.quantity && state.location){
+                const res =await postDonations(state)
+            console.log(res);
+            }
             else return;
+        }
         else {
+
+            // stateForVolanteer.email = user.email;
+            stateForVolanteer.fullName = user.email || user.nickname;
+            console.log("stateForVolanteer", stateForVolanteer)
             postVolanteer(stateForVolanteer);
         }
         setShowAlert(true)
@@ -132,10 +150,7 @@ console.log(user);
                 <form>
                     {
                         type === "donations" ? <>
-                            <div className="form-group">
-                                <label htmlFor="fullName">Full Name:</label>
-                                <input type="text" id="fullName" name="fullName" required onChange={(e) => handleChange(e, "changeName")} />
-                            </div>
+
                             <div className="form-group">
                                 <label htmlFor="phoneNumber">Phone Number:</label>
                                 <input type="tel" id="phoneNumber" name="phoneNumber" required onChange={(e) => handleChange(e, "changePhoneNumber")} />
@@ -152,17 +167,14 @@ console.log(user);
                                 <label htmlFor="location">Location of Item:</label>
                                 <input type="text" id="location" name="location" required onChange={(e) => handleChange(e, "changeLocation")} />
                             </div>
-                            {showAlert && <NewAlert message={`Thank you ${user.given_name?user.given_name:user.nickname} for your donation!`} closeAlert={closeAlert} type="ok" />}
+                            {showAlert && <NewAlert message={`Thank you ${user.given_name ? user.given_name : user.nickname} for your donation!`} closeAlert={closeAlert} type="ok" />}
                             {/* <div className="form-group">
 
                         <label htmlFor="image">Image:</label>
                         <input type="file" id="image" name="image" accept="image/*" required onChange={handleFileSelect} />
                     </div> */}
                         </> : <>
-                            <div className="form-group">
-                                <label htmlFor="fullNameVolunteer">Full Name:</label>
-                                <input type="text" id="fullName" name="fullName" required onChange={(e) => handleChangeForVolanteer(e, "changeName")} />
-                            </div>
+
                             <div className="form-group">
                                 <label htmlFor="phoneNumberVolunteer">Phone Number:</label>
                                 <input type="tel" id="phoneNumber" name="phoneNumber" required onChange={(e) => handleChangeForVolanteer(e, "changePhoneNumber")} />
@@ -173,11 +185,7 @@ console.log(user);
                                 <label htmlFor="locationVolunteer">Location of Volunteer:</label>
                                 <input type="text" id="location" name="location" required onChange={(e) => handleChangeForVolanteer(e, "changeLocation")} />
                             </div>
-                            <div className="form-group">
-
-                                <label htmlFor="imageVolunteer">Image:</label>
-                                <input type="file" id="image" name="image" accept="image/*" required />
-                            </div>
+                            {showAlert && <NewAlert message={`Thank you ${user.given_name ? user.given_name : user.nickname} for joining us. We will contact you soon`} closeAlert={closeAlert} type="ok" />}
                         </>
                     }
 
