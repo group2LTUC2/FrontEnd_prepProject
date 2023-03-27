@@ -11,7 +11,7 @@ function Home() {
             <div >
 
                 <HeroSection />
-                <div style={{ margin: '20px', display: "flex" }}>
+                <div style={{ margin: '20px', display: "flex",justifyContent:"space-between",width:"80rem" }}>
 
                     <DonationFormPage title="Make a Donation" type="donations" />
                     <DonationFormPage title="Join us as a volunteer" type="Volunteer"/>

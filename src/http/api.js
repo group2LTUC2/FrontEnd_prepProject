@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = "http://localhost:3002" //Change the link to the backend link
+const URL = "http://localhost:3003" //Change the link to the backend link
 
 
 const getDonations = async () => {
@@ -74,7 +74,16 @@ const deleteVolanteer = async (id) => {
 
 const getPrayerTimes = async () => {
     try {
-        const response = await axios.post(`${URL}/api`);
+        const response = await axios.get(`${URL}/api`);
+        console.log(response)
+        return response.data;
+    } catch (error) {
+        console.error(error)
+    }
+};
+const getDate = async () => {
+    try {
+        const response = await axios.get(`${URL}/api2`);
         console.log(response)
         return response.data;
     } catch (error) {
@@ -85,4 +94,5 @@ const getPrayerTimes = async () => {
 
 
 
-export { getDonations, postDonations, getPrayerTimes, updateDonations, deleteDonations, getVolanteer, postVolanteer, deleteVolanteer };
+
+export { getDonations, postDonations, getPrayerTimes, getDate , updateDonations, deleteDonations, getVolanteer, postVolanteer, deleteVolanteer };

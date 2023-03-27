@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 import LoginButton from './LogIn/LogIn'
 import DonationsPage from './components/DonationPage/DonationPage';
+import Footer from './components/Footer/Footer';
 function App() {
   const [showPopup, setShowPopup] = useState(true);
 
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <>
-      {/* {showPopup && <PrayerTimesPopup handelShow={handelShow} />} */}
+      {showPopup && <PrayerTimesPopup handelShow={handelShow} />}
       <div >
         <header>
           <Header />
@@ -27,7 +28,7 @@ function App() {
           <Route path='/about' element={<AboutUs />} ></Route>
           <Route path='/donations' element={<DonationsPage/>} ></Route>
         </Routes>
-        
+        <Footer />
       </div>
 
     </>
