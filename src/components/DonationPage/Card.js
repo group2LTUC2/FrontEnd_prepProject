@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cards.css'
+
 function Card({ fullName, item, quantity, location, img, email, user, onDelete, onUpdate, onTake }) {
   const isOwnedByCurrentUser = user && email === user.email;
 

@@ -50,7 +50,7 @@
 }
 
 .menu-toggle.open svg:nth-of-type(1) {
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
   transform-origin: center;
   transition: transform 0.3s ease-in-out;
 }

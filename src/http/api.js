@@ -13,7 +13,7 @@ const getDonations = async () => {
 };
 
 const postDonations = async (userData) => {
-    console.log("from api",userData);
+    console.log("from api", userData);
     try {
         const response = await axios.post(`${URL}/donations`, userData);
         return response.data;
@@ -45,7 +45,7 @@ const deleteDonations = async (id) => {
 const getVolanteer = async () => {
     try {
         const response = await axios.get(`${URL}/volunteer`);
-        console.log(response)
+       
         return response.data;
     } catch (error) {
         console.error(error)
@@ -54,7 +54,7 @@ const getVolanteer = async () => {
 
 const postVolanteer = async (userData) => {
     try {
-        const response = await axios.post(`${URL}/volunteer`,userData);
+        const response = await axios.post(`${URL}/volunteer`, userData);
         console.log(response)
         return response.data;
     } catch (error) {

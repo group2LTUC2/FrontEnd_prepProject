@@ -25,7 +25,7 @@ const Header = () => {
 
         <div className="menu-container">
           <div className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
-            {isOpen ? <FaTimes /> : <FaBars />}
+            {isOpen ? <FaBars />: <FaBars />}
           </div>
           <LoginButton />
           <LogoutButton />
