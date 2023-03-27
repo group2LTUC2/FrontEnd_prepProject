@@ -1,4 +1,4 @@
-import React, { useReducer, useState,useEffect } from 'react';
+import React, { useReducer, useState, useEffect } from 'react';
 import './DonationFormPage.css';
 import axios from 'axios';
 import NewAlert from '../Alert/NewAlert';
@@ -8,17 +8,17 @@ import { useAuth0 } from "@auth0/auth0-react";
 const initialStateForDonations = {
     fullName: "",
     item: "",
-    phoneNumber: "",
+    phonNumber: "",
     quantity: "",
-    location: "",
+    locationOf: "",
     img: "https://files.fm/u/ntagav5p2",
     email: ""
 };
 
 const initialStateForVolanteer = {
     fullName: "",
-    phonNumber: "",
-    locationOf: "",
+    phonnumber: "",
+    locationof: "",
     img: ""
 };
 
@@ -27,13 +27,13 @@ function reducer(state, action) {
         case "changeName":
             return { ...state, fullName: action.payload };
         case "changePhoneNumber":
-            return { ...state, phoneNumber: action.payload };
+            return { ...state, phonNumber: action.payload };
         case "changeItem":
             return { ...state, item: action.payload };
         case "changeQuantity":
             return { ...state, quantity: action.payload };
         case "changeLocation":
-            return { ...state, location: action.payload };
+            return { ...state, locationOf: action.payload };
         default:
             throw new Error();
     }
@@ -44,9 +44,9 @@ function reducerForVolanteer(state, action) {
         case "changeName":
             return { ...state, fullName: action.payload };
         case "changePhoneNumber":
-            return { ...state, phoneNumber: action.payload };
+            return { ...state, phonnumber: action.payload };
         case "changeLocation":
-            return { ...state, location: action.payload };
+            return { ...state, locationof: action.payload };
         default:
             throw new Error();
     }
@@ -101,16 +101,17 @@ function DonationFormPage({ title, type }) {
             return;
         }
 
-        console.log(state)
 
+        console.log("type", type);
         if (type === "donations") {
+            console.log("1", type);
             state.email = user.email;
             state.fullName = user.name || user.nickname;
-            if (state.fullName && state.item && state.phoneNumber && state.quantity && state.location){
-                const res =await postDonations(state)
+
+            console.log("2", type);
+            const res = await postDonations(state)
             console.log(res);
-            }
-            else return;
+
         }
         else {
 
