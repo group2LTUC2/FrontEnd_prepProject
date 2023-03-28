@@ -1,64 +1,191 @@
-import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../../logo.svg'
-import './Header.css';
-import LoginButton from '../../LogIn/LogIn';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import AdbIcon from '@mui/icons-material/Adb';
+import { useAuth0 } from '@auth0/auth0-react';
 import LogoutButton from '../../LogIn/LogOut';
-import { useAuth0 } from "@auth0/auth0-react";
-import {getDate } from '../../http/api';
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { user} = useAuth0();
+import Icon from '@mui/material/Icon';
+import AndroidIcon from '@mui/icons-material/Android';
+import LoginButton from '../../LogIn/LogIn';
+import Stack from '@mui/material/Stack';
+import { Link } from 'react-router-dom';
+import { postUser } from '../../http/api';
 
-  const handleMenuToggle = () => {
-    setIsOpen(!isOpen);
+
+const pages = ['Home', 'Donations', 'Volunteer', 'About us'];
+const settings = ['Logout'];
+
+function Header() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const { user, logout, loginWithRedirect, isAuthenticated } = useAuth0();
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
   };
 
-  const [maghrib, setMaghrib] = useState();
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
-  useEffect(() => {
-      async function helper() {
-          const res = await getDate();
-          setMaghrib(res)
-          
-      }
-      helper();
-
-  }, [])
-
-
+  const handleCloseUserMenu = () => {
+    logout();
+    setAnchorElUser(null);
+  };
+  const handleLogIn =async () => {
+    
+    loginWithRedirect();
+    
+  }
 
   return (
-    <header className="header-container">
-      <nav className="navigation">
-        <div className="logo">
-          <img src={logo} alt="Logo" />
-        </div>
-        <div className="heading">
-        <h1><Link to="/">Sadaqah Box </Link></h1>
-        </div>
-        <div className="date">
-      <p className="date">{maghrib}</p>
-      </div>
-        <div className="menu-container">
-          <div className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
-            {isOpen ? <FaBars />: <FaBars />}
-          </div>
-          <LoginButton />
-          <LogoutButton />
-          <ul className={`menu-list ${isOpen ? 'open' : ''}`}>
-            <li><Link to="/">Home </Link></li>
-            <li><Link to="/donations">Donations </Link></li>
-            <li><Link to="/volunteer">volunteer </Link></li>
-            <li><Link to="/about">About Us </Link></li>
-          </ul>
-        </div>
-      </nav>
+    <AppBar color='transparent' position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <p>🎁 </p>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'white',
+              textDecoration: 'none',
+            }}
+          >
+            Sadaqah Box
+          </Typography>
 
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="white"
+            >
+              <MenuIcon color='info'/>
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              color="white"
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography  textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'white',
+              textDecoration: 'none',
+            }}
+          >
+           Sadaqah Box
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                component={Link} to={page!=="About us"?page!=="Home"?`/${page.toLowerCase().replace(' ', '-')}`:'/':'about'}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+          <Box tyle={{ marginRight: "30px" }}>
+            {!isAuthenticated && (
+              <div style={{ marginRight: "10px" }}>
+                <Stack spacing={2} direction="row">
+                  <Button variant="contained" onClick={handleLogIn} >LogIn</Button>
+                </Stack>
 
-    </header>
+              </div>
+            )}
+
+          </Box>
+
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open settings">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Avatar alt="Remy Sharp" src={user?.picture} />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
-};
-
+}
 export default Header;

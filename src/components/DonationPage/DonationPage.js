@@ -3,11 +3,12 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Card from './Card';
 import axios from 'axios';
 import { deleteDonations, getDonations } from '../../http/api';
-
+import ModalForm from '../Modal/Modal'
 
 function DonationsPage() {
     const [cards, setCards] = useState([]);
     const { user, isAuthenticated } = useAuth0();
+    
 
     useEffect(() => {
         // Use a library such as Axios to fetch data from the database
@@ -37,6 +38,8 @@ function DonationsPage() {
 
     return (
         <div className="cards">
+            <div style={{display:"flex",justifyContent:'center',marginTop:"40px"}}><ModalForm/></div>
+            <h1 style={{color:'#fff'}}>My Cards</h1>
             <div style={{marginTop:"100px"}}>
                 {cards.map(card => (
                     <Card
