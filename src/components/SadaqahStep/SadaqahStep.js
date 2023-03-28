@@ -3,45 +3,58 @@ import './SadaqahStep.css';
 
 const SadaqahStep = () => {
   return (
-    <div className="sadaqah-cards-container">
-      <div className="sadaqah-card">
-        <div className="sadaqah-card-header" style={{ backgroundColor: '#146C94' }}>
-          <h2>Step 1</h2>
+    <>
+      <div class="cardcontainer">
+        <div class="services">
+          <div class="face face1">
+            <div class="content">
+             
+              <img src="https://www.kiswaksa.com/img/press-phone.ba5a0049.png"></img>
+              <h3>Submission Oreintation</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>Fullfill the form that suits your purpose ,so if you want to be Donor submit the donation form , if you wnat to receive donations fullfill the form on the donation page,else if you want to be member of our family engage with voluntering form , our support team will contact you as possible as can </p>
+
+            </div>
+          </div>
         </div>
-        <div className="sadaqah-card-body">
-          <h3>Choose a cause to support</h3>
-          <p>Research different charities and causes to find one that aligns with your values and beliefs.</p>
+
+        <div class="services">
+          <div class="face face1">
+            <div class="content">
+              <img src="https://www.kiswaksa.com/img/%E2%80%8EIMG_5588.ca681897.jpg"></img>
+              <h3>Volunteer Phase</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p> Volunteer is a middle layer connects both the donor and the receptor,takes the  closet donation  from the donor and give it to the receptor.
+
+              </p>
+
+            </div>
+          </div>
+        </div>
+        <div class="services">
+          <div class="face face1">
+            <div class="content">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZRX_rhALsfEX1rOB6posZH7zetsnRHcubYfPzA3bYu3hVLNRbLae_dYBWEYN2zyb6nsA&usqp=CAU"></img>
+              <h3>Receving Donation </h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>This phase related to receptors,when the receptor fullfill the form and select an item a close volunteer will contact him to give the donations.</p>
+
+            </div>
+          </div>
         </div>
       </div>
-      <div className="sadaqah-card">
-        <div className="sadaqah-card-header" style={{ backgroundColor: '#19A7CE' }}>
-          <h2>Step 2</h2>
-        </div>
-        <div className="sadaqah-card-body">
-          <h3>Set a budget</h3>
-          <p>Determine how much you can afford to give and set a budget for your Sadaqah donations.</p>
-        </div>
-      </div>
-      <div className="sadaqah-card">
-        <div className="sadaqah-card-header" style={{ backgroundColor: '#146C94' }}>
-          <h2>Step 3</h2>
-        </div>
-        <div className="sadaqah-card-body">
-          <h3>Make a donation</h3>
-          <p>Donate to your chosen charity or cause using a secure and reputable payment method.</p>
-        </div>
-      </div>
-      <div className="sadaqah-card">
-        <div className="sadaqah-card-header" style={{ backgroundColor:  '#19A7CE' }}>
-          <h2>Step 4</h2>
-        </div>
-        <div className="sadaqah-card-body">
-          <h3>Share your good deeds</h3>
-          <p>Encourage others to give by sharing your Sadaqah experience and the impact it has made.</p>
-        </div>
-      </div>
-      
-    </div>
+
+    </>
+    
   );
 };
 

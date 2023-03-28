@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Auth0Provider } from "@auth0/auth0-react";
+import 'semantic-ui-css/semantic.min.css'
 const domain=process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId=process.env.REACT_APP_AUTH0_CLIENT_ID;
 

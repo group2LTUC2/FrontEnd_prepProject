@@ -74,7 +74,7 @@ const deleteVolanteer = async (id) => {
 
 const getPrayerTimes = async () => {
     try {
-        const response = await axios.post(`${URL}/api`);
+        const response = await axios.get(`${URL}/api`);
         console.log(response)
         return response.data;
     } catch (error) {
@@ -82,7 +82,14 @@ const getPrayerTimes = async () => {
     }
 };
 
+const postUser = async (user) => {
+    try {
+        const response = await axios.post(`${URL}/user`,user);
+        return response.data;
+    } catch (error) {
+        // console.error(error)
+    }
+};
 
 
-
-export { getDonations, postDonations, getPrayerTimes, updateDonations, deleteDonations, getVolanteer, postVolanteer, deleteVolanteer };
+export { postUser,getDonations, postDonations, getPrayerTimes, updateDonations, deleteDonations, getVolanteer, postVolanteer, deleteVolanteer };
