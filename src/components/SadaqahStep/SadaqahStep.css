@@ -1,68 +1,193 @@
-.sadaqah-cards-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .sadaqah-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 300px;
-    height: 400px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  .sadaqah-card-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    color: #ffffff;
-  }
-  
-  .sadaqah-card-header h2 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-  .sadaqah-card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .sadaqah-card-body h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    }
-    
-    .sadaqah-card-body p {
-    font-size: 1.2rem;
-    text-align: center;
-    }
-    
-    .sadaqah-card-header:nth-child(1) {
-    background-color: #F6F1F1;
-    }
-    
-    .sadaqah-card-header:nth-child(2) {
-    background-color: #19A7CE;
-    }
-    
-    .sadaqah-card-header:nth-child(3) {
-    background-color: #146C94;
-    }
-    
-    .sadaqah-card-header:nth-child(4) {
-    background-color: #000000;
-    }
-  
+.cardcontainer .services{
+  position: relative;
+  cursor: pointer;
+}
+
+.cardcontainer .services .face{
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.cardcontainer .services .face.face1{
+  position: relative;
+  background: #333;
+  /* display:  grid; */
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+
+.cardcontainer .services .face.face1 .content{
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.cardcontainer .services:hover .face.face1 .content{
+  opacity: 1;
+}
+
+.cardcontainer .services .face.face1 .content img{
+  max-width: 100px;
+}
+
+.cardcontainer .services .face.face1 .content h3{
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.cardcontainer .services .face.face2{
+  position: relative;
+  background: #fff;
+  /* display:  grid; */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.cardcontainer .services:hover .face.face2{
+  transform: translateY(0);
+}
+
+.cardcontainer .services .face.face2 .content p{
+  margin: 0;
+  padding: 0;
+}
+
+.cardcontainer .services .face.face2 .content a{
+  margin: 15px 0 0;
+  display:  inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #132a99;
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+.cardcontainer .services .face.face2 .content a:hover{
+  background: #333;
+  color: #fff;
+}
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+}
+
+.cardcontainer{
+  display: flex;
+  width: 1000px;
+  position: relative;
+  justify-content: space-around;
+  grid-template-columns: auto auto auto auto;
+  margin: auto;
+  gap: 67px;
+}
+
+.cardcontainer .services{
+  position: relative;
+  cursor: pointer;
+}
+
+.cardcontainer .services .face{
+  width: 350px;
+  height: 250px;
+  transition: 0.5s;
+}
+
+.cardcontainer .services .face.face1{
+  position: relative;
+  background: #333;
+  display:  grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.cardcontainer .services:hover .face.face1{
+  background: #19A7CE;
+  transform: translateY(0);
+}
+
+.cardcontainer .services .face.face1 .content{
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.cardcontainer .services:hover .face.face1 .content{
+  opacity: 1;
+}
+
+.cardcontainer .services .face.face1 .content img{
+  max-width: 250px;
+}
+
+.cardcontainer .services .face.face1 .content h3{
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.cardcontainer .services .face.face2{
+  position: relative;
+  background: #fff;
+  display:  grid;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.cardcontainer .services:hover .face.face2{
+  transform: translateY(0);
+}
+
+.cardcontainer .services .face.face2 .content p{
+  margin: 0;
+  padding: 0;
+}
+
+.cardcontainer .services .face.face2 .content a{
+  margin: 15px 0 0;
+  display:  inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+.cardcontainer .services .face.face2 .content a:hover{
+  background: #333;
+  color: #fff;
+}
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width:80%;
+}
