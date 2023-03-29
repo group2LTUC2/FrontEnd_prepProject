@@ -52,13 +52,14 @@ function Header() {
   }
 
   return (
-    <AppBar color='transparent' position="static">
+    <AppBar color='default' position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <p>🎁 </p>
           <Typography
             variant="h6"
             noWrap
+            
             component="a"
             href="/"
             sx={{
@@ -67,7 +68,7 @@ function Header() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'white',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
@@ -136,7 +137,7 @@ function Header() {
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
+                  sx={{ my: 2, color: 'black', display: 'block' }}
                   component={Link} to={page !== "About us" ? page !== "Home" ? `/${page.toLowerCase().replace(' ', '-')}` : '/' : 'about'}
                 >
                   {page}

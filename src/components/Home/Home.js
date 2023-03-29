@@ -13,7 +13,7 @@ import SliderComponent from "../Slider/SliderComponent";
 import { Button, Icon } from 'semantic-ui-react'
 import { useNavigate } from 'react-router-dom';
 
-import './Home'
+import './Home.css'
 import Footer from "../Footer/Footer";
 function Home() {
     const { loginWithRedirect, isAuthenticated, user } = useAuth0();
@@ -39,7 +39,7 @@ function Home() {
 
                 <HeroSection />
 
-                <div style={{ margin: '20px', display: "flex" }}>
+                <div style={{ margin: '20px', display: "flex",backgroundColor:"#fff" }}>
 
                     {/* <DonationFormPage title="Make a Donation" type="donations" /> */}
                     <div style={{display:'flex',justifyContent:'space-around',flex:1,margin:"60px"}}>

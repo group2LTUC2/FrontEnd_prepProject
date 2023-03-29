@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       {/* {showPopup && <PrayerTimesPopup handelShow={handelShow} />} */}
-      <div style={{backgroundColor:"#141414"}} >
+      <div style={{backgroundColor:"#fff"}} >
         <header>
           <Header />
         </header>
