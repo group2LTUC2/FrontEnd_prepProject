@@ -69,8 +69,8 @@ function Home() {
                         <SecondaryFAQs />
                         {/* <BlogCardsPrimary/> */}
                     </div>
-                    <Profile />
-                    <Footer/>
+                  
+                  
 
                 </div>
 

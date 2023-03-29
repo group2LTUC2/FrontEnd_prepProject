@@ -79,7 +79,10 @@
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.MuiBox-root css-1t6c9ts{
+  display: flex;
+    justify-content: end;
+}
 .menu-list.open {
   display: block;
 }

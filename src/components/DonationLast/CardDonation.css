@@ -1,0 +1,35 @@
+.cardsCss {
+    border-radius: 12px;
+    /* background-image: url("https://t3.ftcdn.net/jpg/04/34/76/28/360_F_434762801_U3oJ77UPQbiyl1ifp4PCuuQ7fnSva91v.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
+    height: 1000px;
+    display: flex;
+    flex-flow: row wrap;
+    filter: brightness(50%);
+    background-color: crimson;
+}
+.cardsCss:hover {
+    filter: brightness(100%);
+    color: white;
+}
+.buttonCards {
+    margin-top: 150px;
+}
+.singleButton {
+    display: flex;
+    justify-content: space-around;
+}
+.button {
+    border-radius: 12px;
+}
+.cardTitle {
+    font-family: fantasy;
+}
+.cardText {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: black; */
+}

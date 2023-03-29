@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './VolunteerPage.css';
 import { getVolanteer } from '../../http/api';
+import Cardes2 from '../VolunteerLast/Cardes2';
 
 function VolunteerPage() {
     const [volunteers, setVolunteers] = useState([]);
@@ -20,7 +21,7 @@ function VolunteerPage() {
             <h1>My Cards</h1>
             <div className="cards-list">
                 {volunteers.map(card => (
-                    <Card
+                    <Cardes2
                         key={card.id}
                         fullName={card.fullname}
                         locationOf={card.locationof}
@@ -34,15 +35,15 @@ function VolunteerPage() {
 }
 
 
-function Card({ fullName, locationOf, img, phoneNumber }) {
-    return (
-        <div className="card">
-            <img src={img||"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIeNjCWolcBL9dwuciYB5IXjB7qUPzQk6H9w&usqp=CAU"} alt={fullName} />
-            <h2>{fullName}</h2>
-            <p>Location: {locationOf}</p>
-            <p>Phone number: {phoneNumber}</p>
-        </div>
-    );
-}
+// function Card({ fullName, locationOf, img, phoneNumber }) {
+//     return (
+//         <div className="card">
+//             <img src={img||"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIeNjCWolcBL9dwuciYB5IXjB7qUPzQk6H9w&usqp=CAU"} alt={fullName} />
+//             <h2>{fullName}</h2>
+//             <p>Location: {locationOf}</p>
+//             <p>Phone number: {phoneNumber}</p>
+//         </div>
+//     );
+// }
 
 export default VolunteerPage;

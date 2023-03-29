@@ -45,10 +45,10 @@ function Header() {
     logout();
     setAnchorElUser(null);
   };
-  const handleLogIn =async () => {
-    
+  const handleLogIn = async () => {
+
     loginWithRedirect();
-    
+
   }
 
   return (
@@ -83,7 +83,7 @@ function Header() {
               onClick={handleOpenNavMenu}
               color="white"
             >
-              <MenuIcon color='info'/>
+              <MenuIcon color='info' />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -106,7 +106,7 @@ function Header() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography  textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -128,20 +128,22 @@ function Header() {
               textDecoration: 'none',
             }}
           >
-           Sadaqah Box
+            Sadaqah Box
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-                component={Link} to={page!=="About us"?page!=="Home"?`/${page.toLowerCase().replace(' ', '-')}`:'/':'about'}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                  component={Link} to={page !== "About us" ? page !== "Home" ? `/${page.toLowerCase().replace(' ', '-')}` : '/' : 'about'}
+                >
+                  {page}
+                </Button>
+              ))}
+            </Box>
+
           <Box tyle={{ marginRight: "30px" }}>
             {!isAuthenticated && (
               <div style={{ marginRight: "10px" }}>

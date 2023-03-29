@@ -11,7 +11,7 @@ const DonationForm = ({ showModal }) => {
         item: '',
         quantity: '',
         img: "https://files.fm/u/ntagav5p2",
-        location: '',
+        locationof:"",
         email: "",
         fullName: ""
     });
@@ -94,8 +94,8 @@ const DonationForm = ({ showModal }) => {
                         />
                         <Form.Input
                             label="Location of Item"
-                            name="location"
-                            value={formData.location}
+                            name="locationof"
+                            value={formData.locationof}
                             onChange={handleChange}
                             required
                         />

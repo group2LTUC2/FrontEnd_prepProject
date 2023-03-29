@@ -9,7 +9,9 @@ import { useState } from 'react';
 import LoginButton from './LogIn/LogIn'
 import DonationsPage from './components/DonationPage/DonationPage';
 import VolunteerPage from './components/VolunteerPage/VolunteerPage';
-
+import Donations from './components/DonationLast/DonationLast';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/Footer/Footer';
 function App() {
   const [showPopup, setShowPopup] = useState(true);
 
@@ -27,10 +29,10 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} ></Route>
           <Route path='/about' element={<AboutUs />} ></Route>
-          <Route path='/donations' element={<DonationsPage/>} ></Route>
+          <Route path='/donations' element={<Donations/>} ></Route>
           <Route path='/volunteer' element={<VolunteerPage/>} ></Route>
         </Routes>
-        
+        <Footer/>
       </div>
 
     </>
