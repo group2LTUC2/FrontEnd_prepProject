@@ -8,23 +8,23 @@ function TakenModal(props) {
     const { user } = useAuth0();
     const transferItemHandler=async(event)=>{
         event.preventDefault();
-        const obj = {
-            fullName: user.email,
-            phonNumber: event.target.phone.value,
-            locationOf: event.target.location.value
-        }
-            const serverURL = `http://localhost:3002`;
-            const response = await axios.post(`${serverURL}/takenitems`, obj);
-            const obj2 = {
-                id: props.item.donationcard_id
-            }
-            const serverURl = `http://localhost:3003/donations/${obj2.id}`;
-            const axiosRes = await axios.delete(serverURl);
-            console.log("deleted")
-            console.log(props.item.takenDonations_id)
+        // const obj = {
+        //     fullName: user.email,
+        //     phonNumber: event.target.phone.value,
+        //     locationOf: event.target.location.value
+        // }
+        //     const serverURL = `http://localhost:3002`;
+        //     const response = await axios.post(`${serverURL}/takenitems`, obj);
+        //     const obj2 = {
+        //         id: props.item.donationcard_id
+        //     }
+        //     const serverURl = `http://localhost:3003/donations/${obj2.id}`;
+        //     const axiosRes = await axios.delete(serverURl);
+        //     console.log("deleted")
+        //     console.log(props.item.takenDonations_id)
             //props.closeOwnerModal();
             props.closeTakenModal();
-            props.sendReq();
+            // props.sendReq();
     }
     return (
         <>

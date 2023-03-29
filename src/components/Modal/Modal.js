@@ -54,7 +54,7 @@ const DonationForm = ({ showModal }) => {
             onClose={handleClose}
             onOpen={handleOpen}
             open={open}
-            trigger={<Button color="green" size="massive" animated>
+            trigger={<Button color="blue" size="massive" animated>
                 <Button.Content visible>Fill out the request from here</Button.Content>
                 <Button.Content hidden>
                     <Icon name='edit' />

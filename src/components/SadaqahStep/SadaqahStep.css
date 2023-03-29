@@ -120,7 +120,7 @@ input[type="text"] {
 }
 
 .cardcontainer .services:hover .face.face1{
-  background: #19A7CE;
+  background: #0d71bb;
   transform: translateY(0);
 }
 

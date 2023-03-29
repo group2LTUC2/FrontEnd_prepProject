@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import heroImage from '../../background.PNG';
+import heroImage from '../../charity.jpg';
+import heroImage2 from '../../charity_font_1.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const HeroContainer = styled.div`
@@ -78,17 +79,17 @@ const HeroImage = styled.img`
   object-fit: cover;
 `;
 
-const HeroSectionWithImage = () => {
+const HeroSectionWithImage = ({ img, type }) => {
   const navigate = useNavigate();
   return (
     <HeroContainer>
       <HeroContent>
-        <HeroTitle>SADAQAH BOX</HeroTitle>
-        <HeroSubtitle> Let's start a new happiness</HeroSubtitle>
-        <HeroButton style={{backgroundColor:'#19A7CE'}} onClick={()=>navigate('/donations')} to={"/dontaions"} >Start happiness</HeroButton>
+        <HeroTitle>{type!=="donations"?"SADAQAH BOX":"Donations"}</HeroTitle>
+        {type!=="donations"?<HeroSubtitle> Let's start a new happiness</HeroSubtitle>:null}
+        <HeroButton style={{ backgroundColor: '#0d71bb' }} onClick={() => navigate('/donations')} to={"/dontaions"} >Start happiness</HeroButton>
       </HeroContent>
       <HeroImageContainer>
-        <HeroImage src={heroImage} alt="Hero Image" />
+        <HeroImage src={type!=="donations"?heroImage:heroImage2} alt="Hero Image" />
       </HeroImageContainer>
     </HeroContainer>
   );

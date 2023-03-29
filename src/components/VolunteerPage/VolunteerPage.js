@@ -3,6 +3,7 @@ import axios from 'axios';
 import './VolunteerPage.css';
 import { getVolanteer } from '../../http/api';
 import Cardes2 from '../VolunteerLast/Cardes2';
+import VolunteerForm from '../VolunterModal/VolunteerModal';
 
 function VolunteerPage() {
     const [volunteers, setVolunteers] = useState([]);
@@ -17,8 +18,10 @@ function VolunteerPage() {
     }, [volunteers]);
     console.log(volunteers)
     return (
-        <div className="cards-page">
-            <h1>My Cards</h1>
+        <div style={{ backgroundColor: "#fff" }} className="cards-page">
+            <div style={{ display: "flex", justifyContent: 'center', backgroundColor: "#fff", marginTop: '50px' }}>
+                <VolunteerForm />
+            </div>
             <div className="cards-list">
                 {volunteers.map(card => (
                     <Cardes2

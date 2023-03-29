@@ -9,6 +9,7 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import ModalForm from '../Modal/Modal'
 import "./CardDonation.css"
+import HeroSectionWithImage from "../HeroSection/HeroSection";
 
 function Donations() {
     const [donationArr, setDonationArr] = useState([]);//store data that come from database
@@ -48,10 +49,15 @@ function Donations() {
         backGroundImage();
     }, [donationArr])
     return (
-        <div>
+        <div style={{backgroundColor: "#fff"}}>
+            
+                <HeroSectionWithImage type="donations" />
 
-            <div style={{ display: "flex", justifyContent: 'center', marginTop: "40px" }}><ModalForm /></div>
-            <div className="mainDiv" style={{ display: "flex", flex: 1, justifyContent: 'center' }}>
+            <div>
+            <div style={{ display: "flex", justifyContent: 'center', backgroundColor: "#fff",marginTop:'50px' }}><ModalForm /></div>
+                
+            </div>
+            <div className="mainDiv" style={{ display: "flex", flex: 1, justifyContent: 'center', backgroundColor: "#fff" }}>
 
                 <Row xs={1} md={4} className="g-4">
                     {donationArr.map((item) => {

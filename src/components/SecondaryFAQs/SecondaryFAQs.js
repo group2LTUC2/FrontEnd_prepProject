@@ -36,7 +36,7 @@ function SecondaryFAQs() {
       {fakeQuestions.map((faq, index) => (
         <div key={index} className="secondary-faqs-item">
           <div className="secondary-faqs-question" onClick={() => handleClick(index)}>
-            {faq.question}
+           <p color='black'> {faq.question}</p>
           </div>
           <div className={`secondary-faqs-answer ${index === activeIndex ? 'active' : ''}`}>
             {faq.answer}
