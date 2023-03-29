@@ -8,7 +8,7 @@ const PrayerTimesPopup = ({ handelShow }) => {
     useEffect(() => {
         async function helper() {
             const res = await getPrayerTimes();
-            setMaghrib(res.data[0]['Maghrib'])
+            setMaghrib(res)
             
         }
         helper();
