@@ -27,6 +27,7 @@ function Home() {
                     email: user.email,
                     img: user.picture
                 }
+            
                 const res = await postUser(obj);
                 console.log(user, res);
             }

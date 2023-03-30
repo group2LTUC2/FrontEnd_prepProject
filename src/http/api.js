@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = "http://localhost:3002" //Change the link to the backend link
+const URL = "http://localhost:5000" //Change the link to the backend link
 
 
 const getDonations = async () => {

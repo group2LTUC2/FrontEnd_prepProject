@@ -15,14 +15,18 @@ function TakenModal(props) {
         // }
         //     const serverURL = `http://localhost:3002`;
         //     const response = await axios.post(`${serverURL}/takenitems`, obj);
-        //     const obj2 = {
-        //         id: props.item.donationcard_id
-        //     }
-        //     const serverURl = `http://localhost:3003/donations/${obj2.id}`;
+            const obj2 = {
+                id: props.item.donationcard_id
+            }
+        //     const serverURl = `http://localhost:5000/donations/${obj2.id}`;
         //     const axiosRes = await axios.delete(serverURl);
         //     console.log("deleted")
         //     console.log(props.item.takenDonations_id)
             //props.closeOwnerModal();
+            alert("Thanks for your taken, your order now go to admin");
+             const serverURl = `http://localhost:5000/donations/${obj2.id}`;
+            const axiosRes = await axios.delete(serverURl);
+
             props.closeTakenModal();
             // props.sendReq();
     }

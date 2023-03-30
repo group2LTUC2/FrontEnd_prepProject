@@ -50,7 +50,7 @@ const VolunteerForm = ({ showModal }) => {
                 </Button.Content>
             </Button>}
         >
-            <Modal.Header>Donate to People in Ramadan</Modal.Header>
+            <Modal.Header>Join Us As a Volunteer</Modal.Header>
             <Modal.Content>
 
                 <Image src={img} fluid />
@@ -67,7 +67,7 @@ const VolunteerForm = ({ showModal }) => {
                         />
                         
                         <Form.Input
-                            label="Location of Item"
+                            label="Your Location"
                             name="locationof"
                             value={formData.locationof}
                             onChange={handleChange}

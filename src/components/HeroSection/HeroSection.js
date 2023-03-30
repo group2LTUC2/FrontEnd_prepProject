@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import heroImage from '../../charity.jpg';
-import heroImage2 from '../../charity_font_1.jpg';
+import heroImage2 from '../../RamadanIMG2.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const HeroContainer = styled.div`

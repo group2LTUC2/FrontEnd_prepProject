@@ -28,7 +28,7 @@ function Cards(props) {
         const obj2 = {
             id: props.item.donationcard_id
         }
-        const serverURl = `http://localhost:3002/donations/${obj2.id}`;
+        const serverURl = `http://localhost:5000/donations/${obj2.id}`;
         const axiosRes = await axios.delete(serverURl);
         console.log("deleted")
         props.sendReq();
