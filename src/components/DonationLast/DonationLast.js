@@ -16,7 +16,7 @@ function Donations() {
     const { user } = useAuth0();
     const [backImg, setBackImg] = useState("https://media.istockphoto.com/id/1165399909/photo/delicious-meal-on-a-black-plate-top-view-copy-space.jpg?s=612x612&w=0&k=20&c=vrMzS4pY_QjiDtCzpVE3ClKqbU636fb4CKH0nlsduC4=");
     const sendReq = async () => {
-        const serverURL = `http://localhost:5000/donations`;
+        const serverURL = `https://back-end-prep-project.vercel.app/donations`;
         const response = await fetch(serverURL);
         const data = await response.json();
         // console.log(data)

@@ -13,7 +13,7 @@ function OwnerModal(props) {
         const obj2 = {
             id: props.item.donationcard_id
         }
-        const serverURl = `http://localhost:5000/donations/${obj2.id}`;
+        const serverURl = `https://back-end-prep-project.vercel.app/donations/${obj2.id}`;
         const axiosRes = await axios.put(serverURl, obj);
         //props.closeOwnerModal();
         props.sendReq();
